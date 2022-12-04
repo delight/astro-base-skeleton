@@ -1,0 +1,56 @@
+---
+import "@skeletonlabs/skeleton/themes/theme-skeleton.css";
+import "@skeletonlabs/skeleton/styles/all.css";
+import "../styles/global.css";
+
+import { AppShell, AppBar } from "@skeletonlabs/skeleton";
+---
+
+<!-- NOTE: we have set the .dark class to enable Dark Mode -->
+<html lang="en" class="dark">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- NOTE: customize your app title -->
+        <title>Skeleton</title>
+    </head>
+    <body>
+        <AppShell slotSidebarLeft="bg-surface-500/5 w-56 p-4">
+            <!-- Header -->
+
+            <svelte:fragment slot="header">
+                <!-- Insert the App Bar: -->
+                <AppBar>
+                    <svelte:fragment slot="lead">
+                        <h1>Skeleton</h1>
+                    </svelte:fragment>
+                    <svelte:fragment slot="trail">
+                        <a
+                            class="btn btn-sm"
+                            href="https://github.com/delight/astro-base-skeleton"
+                            target="_blank"
+                            rel="noreferrer">GitHub</a
+                        >
+                    </svelte:fragment>
+                </AppBar>
+                <!-- --- -->
+            </svelte:fragment>
+            <!-- Sidebar -->
+
+            <svelte:fragment slot="sidebarLeft">
+                <!-- Insert the list: -->
+                <nav class="list-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
+                <!-- --- -->
+            </svelte:fragment>
+            <!-- Page Content Slot -->
+            <slot />
+        </AppShell>
+    </body>
+</html>

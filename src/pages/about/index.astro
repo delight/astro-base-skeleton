@@ -1,0 +1,13 @@
+---
+import { Breadcrumb, Crumb } from "@skeletonlabs/skeleton";
+import LayoutRoot from "../../layouts/LayoutRoot.astro";
+const customSeparator: string = `<span class="text-surface-500">/</span>`;
+---
+
+<LayoutRoot>
+    <Breadcrumb separator={customSeparator}>
+        <Crumb href="/">Home</Crumb>
+        <Crumb>About</Crumb>
+    </Breadcrumb>
+    <a class="btn btn-filled-primary" href="/">Home</a>
+</LayoutRoot>
