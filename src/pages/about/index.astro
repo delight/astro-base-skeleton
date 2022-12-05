@@ -1,13 +1,9 @@
 ---
-import { Breadcrumb, Crumb } from "@skeletonlabs/skeleton";
+import WrapperBreadCrump from "../../components/WrapperBreadCrump.svelte";
 import LayoutRoot from "../../layouts/LayoutRoot.astro";
-const customSeparator: string = `<span class="text-surface-500">/</span>`;
 ---
 
 <LayoutRoot>
-    <Breadcrumb separator={customSeparator}>
-        <Crumb href="/">Home</Crumb>
-        <Crumb>About</Crumb>
-    </Breadcrumb>
+    <WrapperBreadCrump />
     <a class="btn btn-filled-primary" href="/">Home</a>
 </LayoutRoot>
